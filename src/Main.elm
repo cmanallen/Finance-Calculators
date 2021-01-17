@@ -62,6 +62,7 @@ update msg model =
         MortgageFormMsg subMsg ->
             MF.update subMsg model.mortgageForm
                 |> updateMortgageForm model
+
         IncomeFormMsg subMsg ->
             IF.update subMsg model.incomeForm
                 |> updateIncomeForm model

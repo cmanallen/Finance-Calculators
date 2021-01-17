@@ -4,6 +4,7 @@ import Html exposing (..)
 import Utils exposing (renderIntegerInput)
 
 
+
 -- Data
 
 
@@ -11,6 +12,7 @@ type alias Model =
     { monthlyIncome : String
     , monthlyExpenses : String
     }
+
 
 
 -- State
@@ -21,7 +23,7 @@ type Msg
     | SetMonthlyExpenses String
 
 
-update : Msg -> Model -> (Model, Cmd Msg)
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         SetMonthlyIncome value ->

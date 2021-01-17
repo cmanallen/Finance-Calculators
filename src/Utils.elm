@@ -1,9 +1,10 @@
-module Utils exposing (parseFloat, roundDollar, renderIntegerInput, renderFloatInput)
+module Utils exposing (parseFloat, renderFloatInput, renderIntegerInput, roundDollar)
 
-import Round
 import Html exposing (..)
-import Html.Events exposing (onInput)
 import Html.Attributes exposing (step, type_, value)
+import Html.Events exposing (onInput)
+import Round
+
 
 
 -- Math
@@ -19,8 +20,8 @@ roundDollar value =
     value |> Round.round 2 |> (++) "$"
 
 
--- View
 
+-- View
 
 
 renderIntegerInput : String -> String -> (String -> msg) -> Html msg
